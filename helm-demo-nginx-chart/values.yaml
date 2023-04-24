@@ -10,7 +10,7 @@ service:
   type: NodePort
   nodePort: 3007
   port: 80
-  targetPort: 9000
+  # targetPort: 9000
 
 namespace: helm-demo
 
