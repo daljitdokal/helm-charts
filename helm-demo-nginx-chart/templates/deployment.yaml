@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helm-demo-{{ .Release.Name }}-nginx
-  namespace: {{ .Values.namespace }}
+  name: {{ .Release.Name }}-nginx
   labels:
     app: nginx
 spec:
@@ -21,7 +20,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8080
               protocol: TCP
           volumeMounts:
             - name: nginx-index-file
@@ -29,4 +28,4 @@ spec:
       volumes:
         - name: nginx-index-file
           configMap:
-            name: helm-demo-index-html-configmap
+            name: index-html-configmap

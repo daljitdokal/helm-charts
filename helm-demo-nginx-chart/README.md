@@ -11,5 +11,6 @@ sudo kubectl create namespace helm-demo
 ## Apply helm-chart
 
 ```
-helm upgrade --install helm-demo helm-demo-nginx-chart/
+helm upgrade --install --name helm-demo helm-demo-nginx-chart/
+
 ```
