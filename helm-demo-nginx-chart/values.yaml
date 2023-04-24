@@ -8,7 +8,7 @@ image:
 service:
   name: nginx-service
   type: NodePort
-  nodePort: 3007
+  nodePort: 30036
   port: 80
   # targetPort: 9000
 
